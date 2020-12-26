@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 19 13:17:56 2020
-
-@author: Vishal
-"""
-
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
@@ -31,8 +24,6 @@ def predict():
             return render_template('index_main.html', prediction_text='CONGRATS! Your Loan Will be Approved!')
     else:
         return render_template('index_main.html', prediction_text='Oops! Sorry Your Loan Will not be Approved!')
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
