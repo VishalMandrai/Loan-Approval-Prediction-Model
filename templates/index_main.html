@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>LOAN APPROVAL PREDICTOR</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='loan-icon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span style="font-family: Tahoma,Geneva, sans-serif;">LOAN APPROVAL PREDICTOR</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		
+                <input class="form-input" type="text" name="Monthly_Debt" placeholder="Monthly Debt Eg: ₹ 10000" required="required" />
+            	<br>
+                <input class="form-input" type="text" name="Years_of_Credit_History" placeholder="Years of Credit History Eg: 5 or 7" required="required" />
+            	<br>        
+        		<input class="form-input" type="text" name="Number_of_Open_Accounts" placeholder="Number of Open Accounts Eg: 2 or 3" required="required" />
+                <br>
+            	<input class="form-input" type="text" name="Bankruptcies" placeholder="No. of Bankruptcies" required="required Eg: 0 or 1" />
+            	<br>
+        		<input class="form-input" type="text" name="Annual_Income_Changed" placeholder="Annual Income Eg: ₹ 100000" required="required" />
+            	<br>
+        		<input class="form-input" type="text" name="Current_Loan_Amount_Changed" placeholder="Current Loan Amount Eg: ₹ 999" required="required" />
+            	<br>
+        		<input class="form-input" type="text" name="Credit_Score_Changed" placeholder="Credit Score Eg: 650" required="required" />
+            	<br>
+            	<input class="form-input" type="text" name="Home_Ownership/Rent" placeholder="Home Ownership - On Rent : '1' & Others : '0'" required="required" />
+            	<br>
+        		<input class="form-input" type="yext" name="Term->Short Term" placeholder="Loan Term - Short Term : '1' & Long Term : '0'" required="required" />
+                <br>
+                <br>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	
+        	</form>
+
+           <br>
+        <div class='description'>
+              <p>{{ prediction_text }}</p>
+    	</div>
+
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="NONE"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="NONE"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Vishal Mandrai</p>
+       </div>
+
+    </body>
+</html>
