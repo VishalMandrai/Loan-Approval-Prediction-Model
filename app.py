@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model_rf = pickle.load(open('model_rf.pkl', 'rb'))
+model_gb = pickle.load(open('model_gb.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 @app.route('/')
@@ -18,12 +18,14 @@ def predict():
     int_features = [int(x) for x in request.form.values()]    
     final_features = [np.array(int_features)]
     temp = scaler.transform(final_features)
-    prediction = model_rf.predict(temp)
+    prediction = model_gb.predict(temp)
 
     if prediction == 1:
             return render_template('index_main.html', prediction_text='CONGRATS! Your Loan Will be Approved!')
     else:
         return render_template('index_main.html', prediction_text='Oops! Sorry Your Loan Will not be Approved!')
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
