@@ -52,27 +52,12 @@ body{
     margin: -1px 0 0;
 }
 
-/* Top Bar */
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+.description1 p{
+	color: #00303f;
+    font-style: ;
+    font-size: 20px;
+    margin: -1px 0 0;
 }
-
-.bg-steel {
-  background-color: #5f788a;
-}
-
-.site-header .navbar-nav .nav-link {
-  color: #cbd5db;
-}
-
-.site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
-}
-
-.site-header .navbar-nav .nav-link.active {
-  font-weight: 500;
-}
-
 
 /* Text Area */
 .ml-container{
