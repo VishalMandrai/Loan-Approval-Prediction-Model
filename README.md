@@ -26,7 +26,6 @@ So, we will be trying to lessen this danger factor behind, by choosing the safe 
 <ul>
 <li><p><b>Python ( 3.7 version)</b></p></li>
 <li><p><b>Flask</b></p></li>
-<li><p><b>OpenCV</b></p></li>
 <li><p><b>Pandas</b></p></li>
 <li><p><b>Numpy</b></p></li>
 <li><p><b>Seaborn</b></p></li>
