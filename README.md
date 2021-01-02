@@ -17,6 +17,7 @@ So, we will be trying to lessen this danger factor behind, by choosing the safe 
 <hr>
 
 <h3> LOAN FORECASTING METHODOLOGY :</h3>
+
 ![loan_methodology](https://user-images.githubusercontent.com/72686156/103457749-03a35b00-4d28-11eb-9861-83f67d323f8b.png)
 
 <hr>
